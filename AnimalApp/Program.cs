@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Animals;
+using System;
 
 namespace AnimalApp
 {
@@ -6,7 +7,13 @@ namespace AnimalApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var dog = new Dog();
+            var responses = dog.Bark(0);
+
+            foreach (var response in responses)
+            {
+                Console.WriteLine(response);
+            }
         }
     }
 }
