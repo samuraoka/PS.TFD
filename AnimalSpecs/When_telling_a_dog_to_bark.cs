@@ -35,5 +35,13 @@ namespace AnimalSpecs
             var response = dog.Bark(0);
             Assert.AreEqual(0, response.Count);
         }
+
+        [Test]
+        public void The_dog_barks_once_per_treat()
+        {
+            var dog = new Dog();
+            var response = dog.Bark(12);
+            Assert.AreEqual(12, response.Count);
+        }
     }
 }
